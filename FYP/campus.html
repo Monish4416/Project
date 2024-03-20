@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus</title>
+    <style>
+      .campus{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    position: relative;
+overflow: hidden;
+}
+.campus-col img{
+    width: 18%;
+ 
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+
+}
+    </style>
+</head>
+<body>
+</section>
+<section class="campus">
+  <h1>Our University Campus</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+  <div class="row">
+    <div class="campus-col">
+      <img src="london.png">
+      <div class="layer">
+        <h3>A-BLOCK</h3>
+      </div>
+    </div>
+
+    <div class="campus-col">
+      <img src="newyork.png">
+      <div class="layer">
+        <h3>B-BLOCK</h3>
+      </div>
+    </div>
+    <div class="campus-col">
+      <img src="washington.png">
+      <div class="layer">
+        <h3>C-BLOCK</h3>
+      </div>
+    </div>
+  </div>
+</section> 
+</body>
+</html>

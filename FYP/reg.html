@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="reg.css">
+    <link rel="stylesheet" href="https://unicons.inconscout.com/released/v4.0.0/css/line.css">
+</head>
+<body>
+    
+<div class="container">
+    <header>Registration</header>
+
+    <form action="#" method="post" name="contact-form">
+        <div class="form first">
+            <div class="details personal">
+                <span class="title">Identity Details</span>
+
+                <div class="fields">
+
+                    <div class="input-field">
+                        <label>Full Name</label>
+                        <input type="text" name="fname" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Date Of Birth</label>
+                        <input type="date" name="dob" placeholder="Enter birth date" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Father's Name</label>
+                        <input type="text" name="fathersname" placeholder="Enter father's name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Mother's Name</label>
+                        <input type="text" name="mothersname" placeholder="Enter mother's name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Gender</label>
+                        <input type="text" name="gender" placeholder="Enter your gender" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Category</label>
+                        <input type="text" name="category" placeholder="Enter your category" required>
+                    </div>
+
+                </div>
+            </div>
+            <div class="details ID">
+                <span class="title">Personal Details</span>
+
+                <div class="fields">   
+                    <div class="input-field">
+                 <label>Address</label>
+                 <input type="text" name="address" placeholder="Enter your address" required>
+                </div>
+                    <div class="input-field">
+                        <label>District</label>
+                        <input type="text" name="district" placeholder="Enter your district" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>State</label>
+                        <input type="text" name="state" placeholder="Enter your state" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Mobile Number</label>
+                        <input type="number" name="mobileno" placeholder="Enter mobile number" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input type="text" name="pemail" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Religion</label>
+                        <input type="text" name="religion" placeholder="Enter your religion" required>
+                    </div>
+
+                </div>
+
+                 <div class="buttons">
+                    <button class="submitBtn" type="submit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                    <button class="nextBtn" type="reset">
+                        <span class="btnText">Reset</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                 </div>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyLxAxcsN9s8tNRNcpqGCsSNbSXqgkcD5MR97v7snwRi7SQZtfwCgqqDN8XW9dMzZbR6g/exec'
+    const form = document.forms['contact-form']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Registration Sucessfully...!"))
+        .then(() => { window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
